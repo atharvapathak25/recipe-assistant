@@ -1,0 +1,186 @@
+/* General Reset and Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Gradient Background for Light Mode */
+body.light-mode {
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+
+.light-mode .btn-primary {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.light-mode .btn-primary:hover {
+    background: linear-gradient(to right, #0056b3, #004085);
+}
+
+.light-mode .form-control,
+.light-mode .form-select {
+    background-color: white;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.light-mode .form-control:focus,
+.light-mode .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.25);
+}
+
+.light-mode .form-label {
+    color: #495057;
+    font-weight: 500;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+/* Gradient Background for Dark Mode */
+body.dark-mode {
+    background: linear-gradient(to bottom, #343a40, #23272b);
+}
+
+.dark-mode .btn-primary {
+    background: linear-gradient(to right, #17a2b8, #0d6efd);
+    color: white;
+    border-color: #17a2b8;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark-mode .btn-primary:hover {
+    background: linear-gradient(to right, #138496, #0b5c7f);
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+    background-color: #495057;
+    color: #f8f9fa;
+    border: 1px solid #6c757d;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark-mode .form-control:focus,
+.dark-mode .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.25);
+}
+
+.dark-mode .form-label {
+    color: #adb5bd;
+    font-weight: 500;
+}
+
+/* Toggle Button */
+#toggle-dark-mode {
+    padding: 8px 16px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode #toggle-dark-mode {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+}
+
+.light-mode #toggle-dark-mode:hover {
+    background: linear-gradient(to right, #0056b3, #004085);
+}
+
+.dark-mode #toggle-dark-mode {
+    background: linear-gradient(to right, #17a2b8, #0d6efd);
+    color: white;
+}
+
+.dark-mode #toggle-dark-mode:hover {
+    background: linear-gradient(to right, #138496, #0b5c7f);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    #toggle-dark-mode {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .form-label {
+        font-size: 14px;
+    }
+}
+
+/* Form Elements */
+input.form-control,
+select.form-select {
+    font-size: 16px;
+    padding: 10px;
+}
+
+input.form-control::placeholder,
+select.form-select {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* Cards */
+.card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* General Buttons */
+.btn {
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Accessibility Enhancements */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
